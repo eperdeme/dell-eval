@@ -47,3 +47,10 @@ if ! test -d /etc/puppet/modules/vshield; then
 else
     echo already installed  vmware/vshield
 fi
+
+if ! test -d /etc/puppet/modules/dhpd; then
+    echo Installing dhcp module
+    puppet module install zleslie/dhcp
+else
+    echo already installed  zleslie/dhcp
+fi
